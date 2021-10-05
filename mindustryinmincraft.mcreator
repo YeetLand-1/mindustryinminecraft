@@ -1,0 +1,62 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Mindustry",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mindustry"
+    },
+    {
+      "name": "ROUTER",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "router"
+    },
+    {
+      "name": "Routergui",
+      "type": "gui",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "routergui"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.mindustryinmincraft.router": "ROUTER",
+      "itemGroup.tabmindustry": "Mindustry"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "mindustryinmincraft",
+    "modName": "MindustryInMincraft",
+    "version": "1.0.0",
+    "author": "manan, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.mindustryinmincraft",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100236710
+}

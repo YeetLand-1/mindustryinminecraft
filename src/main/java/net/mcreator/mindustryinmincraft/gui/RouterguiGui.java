@@ -136,6 +136,15 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 120, 31) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
 			}));
 			int si;
 			int sj;
@@ -283,6 +292,8 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 							continue;
 						if (j == 1)
 							continue;
+						if (j == 2)
+							continue;
 						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 					}
 				} else {
@@ -290,6 +301,8 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 						if (i == 0)
 							continue;
 						if (i == 1)
+							continue;
+						if (i == 2)
 							continue;
 						playerIn.inventory.placeItemBackInInventory(playerIn.world,
 								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));

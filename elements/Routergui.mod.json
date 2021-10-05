@@ -45,8 +45,8 @@
             "value": ""
           },
           "id": 2,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
           "name": "Slot #2",
           "x": 245,
           "y": 67

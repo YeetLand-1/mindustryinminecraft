@@ -1,9 +1,9 @@
 {
   "parent": "mindustryinmincraft:custom/conveyer",
   "textures": {
-    "all": "mindustryinmincraft:blocks/conveyoranimated",
-    "particle": "mindustryinmincraft:blocks/conveyoranimated",
-    "3": "mindustryinmincraft:blocks/conveyoranimated",
+    "all": "mindustryinmincraft:blocks/texture2",
+    "particle": "mindustryinmincraft:blocks/texture2",
+    "3": "mindustryinmincraft:blocks/conveyor_right1",
     "4": "mindustryinmincraft:blocks/texture2",
     "5": "mindustryinmincraft:blocks/bottom",
     "6": "mindustryinmincraft:blocks/texture2",

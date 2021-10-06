@@ -36,12 +36,22 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "conveyer"
+    },
+    {
+      "name": "ConveyorRight",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyor_right"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.mindustryinmincraft.conveyor_right": "Conveyor Right",
       "block.mindustryinmincraft.conveyer": "Conveyer",
       "block.mindustryinmincraft.router": "Router",
       "itemGroup.tabmindustry": "Mindustry"

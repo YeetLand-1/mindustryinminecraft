@@ -5,14 +5,14 @@
         "3": "bottom",
         "4": "texture2",
         "5": "texture1",
-        "6": "conveyor",
+        "6": "conveyoranimated32",
         "missing": ""
       },
       "name": "default"
     },
     "conveyertest": {
       "map": {
-        "3": "conveyor",
+        "3": "conveyoranimated",
         "4": "texture2",
         "5": "bottom",
         "6": "texture2",

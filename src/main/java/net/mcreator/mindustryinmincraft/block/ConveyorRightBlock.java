@@ -39,11 +39,11 @@ import java.util.List;
 import java.util.Collections;
 
 @MindustryinmincraftModElements.ModElement.Tag
-public class ConveyerBlock extends MindustryinmincraftModElements.ModElement {
-	@ObjectHolder("mindustryinmincraft:conveyer")
+public class ConveyorRightBlock extends MindustryinmincraftModElements.ModElement {
+	@ObjectHolder("mindustryinmincraft:conveyor_right")
 	public static final Block block = null;
-	public ConveyerBlock(MindustryinmincraftModElements instance) {
-		super(instance, 3);
+	public ConveyorRightBlock(MindustryinmincraftModElements instance) {
+		super(instance, 4);
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class ConveyerBlock extends MindustryinmincraftModElements.ModElement {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
-			setRegistryName("conveyer");
+			setRegistryName("conveyor_right");
 		}
 
 		@Override

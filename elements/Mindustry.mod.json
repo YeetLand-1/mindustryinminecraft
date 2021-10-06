@@ -4,7 +4,7 @@
   "definition": {
     "name": "Mindustry",
     "icon": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:Conveyer"
     },
     "showSearch": true
   }

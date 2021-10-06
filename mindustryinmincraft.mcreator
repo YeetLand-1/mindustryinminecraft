@@ -33,7 +33,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.mindustryinmincraft.router": "ROUTER",
+      "block.mindustryinmincraft.router": "Router",
       "itemGroup.tabmindustry": "Mindustry"
     }
   },

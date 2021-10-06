@@ -113,7 +113,7 @@ public class ROUTERBlock extends MindustryinmincraftModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("ROUTER");
+						return new StringTextComponent("Router");
 					}
 
 					@Override
@@ -245,7 +245,7 @@ public class ROUTERBlock extends MindustryinmincraftModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("ROUTER");
+			return new StringTextComponent("Router");
 		}
 
 		@Override

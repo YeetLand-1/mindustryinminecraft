@@ -113,7 +113,7 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 39, 31) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 31) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;
@@ -124,7 +124,7 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 84, 31) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 31) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;
@@ -135,7 +135,7 @@ public class RouterguiGui extends MindustryinmincraftModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 120, 31) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 115, 31) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;

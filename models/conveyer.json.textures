@@ -9,6 +9,16 @@
         "missing": ""
       },
       "name": "default"
+    },
+    "conveyertest": {
+      "map": {
+        "3": "conveyor",
+        "4": "texture2",
+        "5": "bottom",
+        "6": "texture2",
+        "missing": "texture2"
+      },
+      "name": "conveyertest"
     }
   }
 }

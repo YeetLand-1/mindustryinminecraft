@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "3": "bottom",
+        "4": "texture2",
+        "5": "texture1",
+        "6": "conveyor",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

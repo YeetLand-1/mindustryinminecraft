@@ -27,12 +27,22 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "routergui"
+    },
+    {
+      "name": "Conveyer",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyer"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.mindustryinmincraft.conveyer": "Conveyer",
       "block.mindustryinmincraft.router": "Router",
       "itemGroup.tabmindustry": "Mindustry"
     }
@@ -44,10 +54,11 @@
   "workspaceSettings": {
     "modid": "mindustryinmincraft",
     "modName": "MindustryInMincraft",
-    "version": "1.0.0",
-    "author": "manan, MCreator",
+    "version": "0.0.1",
+    "description": "Mindustry in Minecraft",
+    "author": "YeetLand1",
     "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "license": "MIT License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -55,6 +66,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "r/mindustry and discord.gg/mindustry",
     "modElementsPackage": "net.mcreator.mindustryinmincraft",
     "lockBaseModFiles": false
   },

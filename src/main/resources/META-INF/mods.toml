@@ -1,14 +1,17 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="MIT License"
 
 [[mods]]
 modId="mindustryinmincraft"
-version="1.0.0"
+version="0.0.1"
 displayName="MindustryInMincraft"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="r/mindustry and discord.gg/mindustry"
 displayURL="https://mcreator.net"
-authors="manan, MCreator"
+authors="YeetLand1"
+description='''
+Mindustry in Minecraft
+'''
 
 [[dependencies.mindustryinmincraft]]
     modId="minecraft"

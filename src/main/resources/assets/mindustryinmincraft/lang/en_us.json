@@ -2,5 +2,7 @@
   "block.mindustryinmincraft.conveyor_right": "Conveyor Right",
   "block.mindustryinmincraft.conveyer": "Conveyer",
   "block.mindustryinmincraft.router": "Router",
-  "itemGroup.tabmindustry": "Mindustry"
+  "itemGroup.tabmindustry": "Mindustry",
+  "item.mindustryinmincraft.copper": "Copper",
+  "item.mindustryinmincraft.lead": "Lead"
 }

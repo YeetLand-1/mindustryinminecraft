@@ -104,27 +104,15 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": false,
-    "guiBoundTo": "<NONE>",
+    "hasInventory": true,
+    "guiBoundTo": "ConveyorGui",
     "openGUIOnRightClick": true,
-    "inventorySize": 6,
+    "inventorySize": 1,
     "inventoryStackSize": 1,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
-    "inventoryOutSlotIDs": [
-      0,
-      1,
-      2,
-      3,
-      4
-    ],
-    "inventoryInSlotIDs": [
-      0,
-      1,
-      2,
-      3,
-      4
-    ],
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -133,6 +121,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "ConveyerUpdateTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

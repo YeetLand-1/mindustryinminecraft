@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "copper",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "name": "Copper",
     "rarity": "COMMON",
     "creativeTab": {

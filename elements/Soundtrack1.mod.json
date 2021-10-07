@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "disk1",
+    "name": "Soundtrack 1",
+    "description": "First Mindustry Soundtrack",
+    "creativeTab": {
+      "value": "CUSTOM:Mindustry"
+    },
+    "music": {
+      "value": "CUSTOM:soundtrack1"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

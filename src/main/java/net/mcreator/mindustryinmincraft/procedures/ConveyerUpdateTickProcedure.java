@@ -135,9 +135,12 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
+								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 									}
 								});
 							}
@@ -223,9 +226,12 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
+								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 									}
 								});
 							}
@@ -311,9 +317,12 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
+								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 									}
 								});
 							}
@@ -399,9 +408,12 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
+								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
+										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
+										_stk.shrink(_amount);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
 									}
 								});
 							}

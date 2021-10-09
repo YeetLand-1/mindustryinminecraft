@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "soundtrack2",
+    "name": "Soundtrack 2",
+    "description": "Second Mindustry Soundtrack",
+    "creativeTab": {
+      "value": "CUSTOM:Mindustry"
+    },
+    "music": {
+      "value": "CUSTOM:soundtrack2"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

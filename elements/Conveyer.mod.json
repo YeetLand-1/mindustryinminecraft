@@ -57,9 +57,10 @@
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "canProvidePower": false,
+    "canProvidePower": true,
     "emittedRedstonePower": {
-      "fixedValue": 15.0
+      "fixedValue": 15.0,
+      "name": "ConveyerValue"
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {

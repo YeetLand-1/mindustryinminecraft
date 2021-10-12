@@ -45,6 +45,10 @@ public class MindustryinmincraftModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public MindustryinmincraftModElements() {
+		sounds.put(new ResourceLocation("mindustryinmincraft", "soundtrack1"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("mindustryinmincraft", "soundtrack1")));
+		sounds.put(new ResourceLocation("mindustryinmincraft", "soundtrack2"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("mindustryinmincraft", "soundtrack2")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("mindustryinmincraft").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

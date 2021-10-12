@@ -119,6 +119,36 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "soundtrack_2"
+    },
+    {
+      "name": "ConveyerValue",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyer_value",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

@@ -64,6 +64,7 @@ import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.mindustryinmincraft.procedures.ConveyerValueProcedure;
 import net.mcreator.mindustryinmincraft.procedures.ConveyerUpdateTickProcedure;
 import net.mcreator.mindustryinmincraft.itemgroup.MindustryItemGroup;
 import net.mcreator.mindustryinmincraft.gui.ConveyorGuiGui;
@@ -79,6 +80,8 @@ import java.util.HashMap;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
+
+import com.google.common.collect.ImmutableMap;
 
 @MindustryinmincraftModElements.ModElement.Tag
 public class ConveyerBlock extends MindustryinmincraftModElements.ModElement {
@@ -159,6 +162,20 @@ public class ConveyerBlock extends MindustryinmincraftModElements.ModElement {
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
 			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+		}
+
+		@Override
+		public boolean canProvidePower(BlockState state) {
+			return true;
+		}
+
+		@Override
+		public int getWeakPower(BlockState blockstate, IBlockReader blockAccess, BlockPos pos, Direction side) {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			World world = (World) blockAccess;
+			return (int) ConveyerValueProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
 		}
 
 		@Override

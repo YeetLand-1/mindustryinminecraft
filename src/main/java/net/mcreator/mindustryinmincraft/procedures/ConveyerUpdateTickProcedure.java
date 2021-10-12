@@ -3,6 +3,7 @@ package net.mcreator.mindustryinmincraft.procedures;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
@@ -17,6 +18,7 @@ import net.mcreator.mindustryinmincraft.MindustryinmincraftMod;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
+import java.util.HashMap;
 
 public class ConveyerUpdateTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -44,6 +46,29 @@ public class ConveyerUpdateTickProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			ConveyerValueProcedure.executeProcedure($_dependencies);
+		}
+		if (world instanceof World)
+			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) x, (int) y, (int) (z - 1)),
+					((World) world).getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1))).getBlock());
+		if (world instanceof World)
+			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) x, (int) y, (int) (z + 1)),
+					((World) world).getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlock());
+		if (world instanceof World)
+			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) (x - 1), (int) y, (int) z),
+					((World) world).getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlock());
+		if (world instanceof World)
+			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) (x - 1), (int) y, (int) z),
+					((World) world).getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlock());
+		if (world instanceof World)
+			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) x, (int) y, (int) z),
+					((World) world).getBlockState(new BlockPos((int) x, (int) y, (int) z)).getBlock());
 		if ((!((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -135,12 +160,9 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
-								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-										_stk.shrink(_amount);
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
 									}
 								});
 							}
@@ -226,12 +248,9 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
-								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-										_stk.shrink(_amount);
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
 									}
 								});
 							}
@@ -317,12 +336,9 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
-								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-										_stk.shrink(_amount);
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
 									}
 								});
 							}
@@ -408,12 +424,9 @@ public class ConveyerUpdateTickProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (0);
-								final int _amount = (int) 1;
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
-										ItemStack _stk = capability.getStackInSlot(_sltid).copy();
-										_stk.shrink(_amount);
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _stk);
+										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
 									}
 								});
 							}

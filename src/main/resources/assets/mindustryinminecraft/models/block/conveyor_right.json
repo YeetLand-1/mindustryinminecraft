@@ -1,0 +1,12 @@
+{
+  "parent": "mindustryinminecraft:custom/conveyer",
+  "textures": {
+    "all": "mindustryinminecraft:blocks/texture2",
+    "particle": "mindustryinminecraft:blocks/texture2",
+    "3": "mindustryinminecraft:blocks/bottom",
+    "4": "mindustryinminecraft:blocks/texture2",
+    "5": "mindustryinminecraft:blocks/texture1",
+    "6": "mindustryinminecraft:blocks/conveyoranimated32",
+    "missing": "mindustryinminecraft:blocks/"
+  }
+}

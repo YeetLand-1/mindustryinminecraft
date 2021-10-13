@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "texture2",
-    "textureTop": "mechanical_drill_tr",
-    "textureLeft": "texture2",
-    "textureFront": "texture2",
-    "textureRight": "texture2",
-    "textureBack": "texture2",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "texture": "copperorestone",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 11,
+    "customModelName": "Single texture",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Drill Top Left",
+    "name": "Stone Copper Ore",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -41,7 +41,7 @@
     "creativeTab": {
       "value": "CUSTOM:Mindustry"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -121,16 +121,30 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "onTickUpdate": {
+      "name": "DrillUpdateTick_GenerateStuff"
+    },
+    "spawnWorldTypes": [
+      "Surface"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
       }
     ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
+    "minGenerateHeight": 20,
     "maxGenerateHeight": 64
   }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mindustryinminecraft:block/conveyer"
+    },
+    "facing=east": {
+      "model": "mindustryinminecraft:block/conveyer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mindustryinminecraft:block/conveyer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mindustryinminecraft:block/conveyer",
+      "y": 270
+    }
+  }
+}

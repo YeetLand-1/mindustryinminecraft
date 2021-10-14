@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mindustryinminecraft:blocks/router",
+    "up": "mindustryinminecraft:blocks/router",
+    "north": "mindustryinminecraft:blocks/router",
+    "east": "mindustryinminecraft:blocks/router",
+    "south": "mindustryinminecraft:blocks/router",
+    "west": "mindustryinminecraft:blocks/router",
+    "particle": "mindustryinminecraft:blocks/router"
+  }
+}

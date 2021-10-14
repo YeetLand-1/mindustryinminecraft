@@ -54,7 +54,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 10,
+    "tickRate": 30,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -121,6 +121,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "DrillUpdateTick_GenerateStuff"
+    },
     "onRandomUpdateEvent": {
       "name": "DrillMultiblocker"
     },

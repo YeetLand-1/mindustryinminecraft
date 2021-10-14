@@ -246,7 +246,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "mindustryinmincraft",

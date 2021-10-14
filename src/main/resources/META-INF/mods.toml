@@ -3,17 +3,17 @@ loaderVersion="[36,)"
 license="MIT License"
 
 [[mods]]
-modId="mindustryinminecraft"
+modId="mindustryinmincraft"
 version="0.0.1"
-displayName="MindustryInMinecraft"
-credits="Vatisco"
+displayName="MindustryInMincraft"
+credits="r/mindustry and discord.gg/mindustry"
 displayURL="https://mcreator.net"
 authors="YeetLand1"
 description='''
 Mindustry in Minecraft
 '''
 
-[[dependencies.mindustryinminecraft]]
+[[dependencies.mindustryinmincraft]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

@@ -1,0 +1,271 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Mindustry",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mindustry"
+    },
+    {
+      "name": "ROUTER",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "router"
+    },
+    {
+      "name": "Routergui",
+      "type": "gui",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "routergui"
+    },
+    {
+      "name": "Conveyer",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyer"
+    },
+    {
+      "name": "ConveyorRight",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyor_right"
+    },
+    {
+      "name": "Copper",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper"
+    },
+    {
+      "name": "Lead",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lead"
+    },
+    {
+      "name": "ConveyerUpdateTick",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyer_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ConveyorGui",
+      "type": "gui",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyor_gui"
+    },
+    {
+      "name": "Soundtrack1",
+      "type": "musicdisc",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soundtrack_1"
+    },
+    {
+      "name": "Soundtrack2",
+      "type": "musicdisc",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soundtrack_2"
+    },
+    {
+      "name": "ConveyerValue",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyer_value",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drillgui",
+      "type": "gui",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drillgui"
+    },
+    {
+      "name": "Drill",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill"
+    },
+    {
+      "name": "DrillMultiblocker",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_multiblocker",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Drill11",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_11"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "soundtrack1",
+      "files": [
+        "mindustry_soundtrack___game1"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "soundtrack2",
+      "files": [
+        "mindustry_soundtrack___game2"
+      ],
+      "category": "record",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "block.mindustryinmincraft.conveyor_right": "Conveyor Right",
+      "block.mindustryinmincraft.conveyer": "Conveyer",
+      "itemGroup.tabmindustry": "Mindustry",
+      "item.mindustryinmincraft.copper": "Copper",
+      "block.mindustryinmincraft.drill": "Drill",
+      "item.mindustryinmincraft.soundtrack_2": "Soundtrack 2",
+      "item.mindustryinmincraft.lead": "Lead",
+      "item.mindustryinmincraft.soundtrack_1": "Soundtrack 1",
+      "block.mindustryinmincraft.drill_11": "Drill 1 1",
+      "subtitles.soundtrack1": "",
+      "subtitles.soundtrack2": "",
+      "block.mindustryinmincraft.router": "Router",
+      "item.mindustryinmincraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
+      "item.mindustryinmincraft.soundtrack_1.desc": "First Mindustry Soundtrack"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "mindustryinmincraft",
+    "modName": "MindustryInMincraft",
+    "version": "0.0.1",
+    "description": "Mindustry in Minecraft",
+    "author": "YeetLand1",
+    "websiteURL": "https://mcreator.net",
+    "license": "MIT License",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "r/mindustry and discord.gg/mindustry",
+    "modElementsPackage": "net.mcreator.mindustryinmincraft",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100236710
+}

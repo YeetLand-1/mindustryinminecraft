@@ -1,20 +1,20 @@
 {
+  "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
   "item.mindustryinminecraft.lead": "Lead",
   "item.mindustryinminecraft.soundtrack_1.desc": "First Mindustry Soundtrack",
   "block.mindustryinminecraft.conveyer": "Conveyer",
-  "subtitles.soundtrack1": "",
-  "subtitles.soundtrack2": "",
-  "block.mindustryinmincraft.router": "Router",
-  "item.mindustryinminecraft.copper": "Copper",
-  "block.mindustryinminecraft.conveyor_right": "Conveyor Right",
-  "block.mindustryinminecraft.drill": "Drill",
-  "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
   "itemGroup.tabmindustry": "Mindustry",
   "item.mindustryinminecraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
   "block.mindustryinminecraft.router": "Router",
   "block.mindustryinminecraft.drill_11": "Drill Top Left",
   "block.mindustryinminecraft.drill_12": "Drill Top Right",
+  "subtitles.soundtrack1": "",
   "block.mindustryinminecraft.drill_13": "Drill Bottom Right",
+  "subtitles.soundtrack2": "",
   "item.mindustryinminecraft.soundtrack_2": "Soundtrack 2",
-  "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1"
+  "block.mindustryinmincraft.router": "Router",
+  "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
+  "item.mindustryinminecraft.copper": "Copper",
+  "block.mindustryinminecraft.conveyor_right": "Conveyor Right",
+  "block.mindustryinminecraft.drill": "Drill"
 }

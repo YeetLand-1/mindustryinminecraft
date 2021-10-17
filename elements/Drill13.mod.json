@@ -39,7 +39,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Mindustry"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {

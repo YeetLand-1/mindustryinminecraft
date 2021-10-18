@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mindustryinminecraft:blocks/block-ore-titanium-ui",
+    "particle": "mindustryinminecraft:blocks/block-ore-titanium-ui"
+  }
+}

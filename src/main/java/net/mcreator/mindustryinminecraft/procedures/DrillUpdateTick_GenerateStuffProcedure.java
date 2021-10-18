@@ -6,10 +6,18 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.LeadItem;
 import net.minecraft.item.ItemStack;
 
+import net.mcreator.mindustryinminecraft.item.TitaniumItem;
+import net.mcreator.mindustryinminecraft.item.ScrapItem;
 import net.mcreator.mindustryinminecraft.item.CopperItem;
+import net.mcreator.mindustryinminecraft.item.CoalItem;
+import net.mcreator.mindustryinminecraft.block.StoneTitaniumOreBlock;
+import net.mcreator.mindustryinminecraft.block.StoneScrapOreBlock;
+import net.mcreator.mindustryinminecraft.block.StoneLeadOreBlock;
 import net.mcreator.mindustryinminecraft.block.StoneCopperOreBlock;
+import net.mcreator.mindustryinminecraft.block.StoneCoalOreBlock;
 import net.mcreator.mindustryinminecraft.block.ConveyerBlock;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
@@ -56,13 +64,98 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					});
 				}
 			}
+			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CopperItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			}
 		}
-		if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == StoneLeadOreBlock.block)) {
 			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
+					final int _sltid = (int) (((new Random()).nextInt((int) 9 + 1)));
+					final ItemStack _setstack = new ItemStack(LeadItem.block);
 					_setstack.setCount((int) 1);
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
@@ -71,12 +164,98 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					});
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			}
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == StoneCoalOreBlock.block)) {
 			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
+					final int _sltid = (int) (((new Random()).nextInt((int) 9 + 1)));
+					final ItemStack _setstack = new ItemStack(CoalItem.block);
 					_setstack.setCount((int) 1);
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
@@ -85,12 +264,98 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					});
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(CoalItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			}
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == StoneScrapOreBlock.block)) {
 			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
+					final int _sltid = (int) (((new Random()).nextInt((int) 9 + 1)));
+					final ItemStack _setstack = new ItemStack(ScrapItem.block);
 					_setstack.setCount((int) 1);
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
@@ -99,12 +364,98 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					});
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(ScrapItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			}
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == StoneTitaniumOreBlock.block)) {
 			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
+					final int _sltid = (int) (((new Random()).nextInt((int) 9 + 1)));
+					final ItemStack _setstack = new ItemStack(TitaniumItem.block);
 					_setstack.setCount((int) 1);
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
@@ -113,32 +464,89 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					});
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
-			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
-				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
-					_setstack.setCount((int) 1);
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-						}
-					});
+			if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
 				}
-			}
-		} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
-			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
-				if (_ent != null) {
-					final int _sltid = (int) (0);
-					final ItemStack _setstack = new ItemStack(CopperItem.block);
-					_setstack.setCount((int) 1);
-					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						if (capability instanceof IItemHandlerModifiable) {
-							((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-						}
-					});
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if (((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)) {
+				{
+					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
+					if (_ent != null) {
+						final int _sltid = (int) (0);
+						final ItemStack _setstack = new ItemStack(TitaniumItem.block);
+						_setstack.setCount((int) 1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
 				}
 			}
 		}

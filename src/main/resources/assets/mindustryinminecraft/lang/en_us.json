@@ -1,5 +1,4 @@
 {
-  "item.mindustryinminecraft.lead": "Lead",
   "item.mindustryinminecraft.coal": "Coal",
   "item.mindustryinminecraft.soundtrack_1.desc": "First Mindustry Soundtrack",
   "block.mindustryinminecraft.conveyer": "Conveyer",
@@ -14,6 +13,7 @@
   "block.mindustryinminecraft.stone_coal_ore": "Stone Coal Ore",
   "block.mindustryinminecraft.drill": "Drill",
   "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
+  "item.mindustryinminecraft.lead_1": "Lead",
   "itemGroup.tabmindustry": "Mindustry",
   "item.mindustryinminecraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
   "block.mindustryinminecraft.router": "Router",

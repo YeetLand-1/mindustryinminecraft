@@ -56,15 +56,6 @@
       "registry_name": "copper"
     },
     {
-      "name": "Lead",
-      "type": "item",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "lead"
-    },
-    {
       "name": "ConveyerUpdateTick",
       "type": "procedure",
       "sortid": 7,
@@ -237,7 +228,7 @@
       "name": "DrillUpdateTick_GenerateStuff",
       "type": "procedure",
       "sortid": 17,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "drill_update_tick_generate_stuff",
@@ -324,6 +315,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "coal"
+    },
+    {
+      "name": "Lead1",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lead_1"
     }
   ],
   "variable_elements": [],
@@ -347,7 +347,6 @@
   ],
   "language_map": {
     "en_us": {
-      "item.mindustryinminecraft.lead": "Lead",
       "item.mindustryinminecraft.coal": "Coal",
       "item.mindustryinminecraft.soundtrack_1.desc": "First Mindustry Soundtrack",
       "block.mindustryinminecraft.conveyer": "Conveyer",
@@ -362,6 +361,7 @@
       "block.mindustryinminecraft.stone_coal_ore": "Stone Coal Ore",
       "block.mindustryinminecraft.drill": "Drill",
       "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
+      "item.mindustryinminecraft.lead_1": "Lead",
       "itemGroup.tabmindustry": "Mindustry",
       "item.mindustryinminecraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
       "block.mindustryinminecraft.router": "Router",

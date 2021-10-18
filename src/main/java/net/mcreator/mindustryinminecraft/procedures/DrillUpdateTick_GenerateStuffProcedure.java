@@ -6,11 +6,11 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.LeadItem;
 import net.minecraft.item.ItemStack;
 
 import net.mcreator.mindustryinminecraft.item.TitaniumItem;
 import net.mcreator.mindustryinminecraft.item.ScrapItem;
+import net.mcreator.mindustryinminecraft.item.Lead1Item;
 import net.mcreator.mindustryinminecraft.item.CopperItem;
 import net.mcreator.mindustryinminecraft.item.CoalItem;
 import net.mcreator.mindustryinminecraft.block.StoneTitaniumOreBlock;
@@ -155,7 +155,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
 					final int _sltid = (int) (((new Random()).nextInt((int) 9 + 1)));
-					final ItemStack _setstack = new ItemStack(LeadItem.block);
+					final ItemStack _setstack = new ItemStack(Lead1Item.block);
 					_setstack.setCount((int) 1);
 					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 						if (capability instanceof IItemHandlerModifiable) {
@@ -169,7 +169,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
@@ -183,7 +183,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) z));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
@@ -197,7 +197,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
@@ -211,7 +211,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
@@ -225,7 +225,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z + 1)));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
@@ -239,7 +239,7 @@ public class DrillUpdateTick_GenerateStuffProcedure {
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)));
 					if (_ent != null) {
 						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(LeadItem.block);
+						final ItemStack _setstack = new ItemStack(Lead1Item.block);
 						_setstack.setCount((int) 1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {

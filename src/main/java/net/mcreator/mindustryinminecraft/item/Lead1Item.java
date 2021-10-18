@@ -12,11 +12,11 @@ import net.mcreator.mindustryinminecraft.itemgroup.MindustryItemGroup;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftModElements;
 
 @MindustryinminecraftModElements.ModElement.Tag
-public class LeadItem extends MindustryinminecraftModElements.ModElement {
-	@ObjectHolder("mindustryinminecraft:lead")
+public class Lead1Item extends MindustryinminecraftModElements.ModElement {
+	@ObjectHolder("mindustryinminecraft:lead_1")
 	public static final Item block = null;
-	public LeadItem(MindustryinminecraftModElements instance) {
-		super(instance, 6);
+	public Lead1Item(MindustryinminecraftModElements instance) {
+		super(instance, 25);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class LeadItem extends MindustryinminecraftModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(MindustryItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("lead");
+			setRegistryName("lead_1");
 		}
 
 		@Override

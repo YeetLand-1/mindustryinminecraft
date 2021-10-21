@@ -324,6 +324,74 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "lead_1"
+    },
+    {
+      "name": "MakeConveyer",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "make_conveyer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CraftingScreen",
+      "type": "gui",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_screen"
+    },
+    {
+      "name": "Conveyermakerkey",
+      "type": "keybind",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyermakerkey"
+    },
+    {
+      "name": "ConveyermakerkeyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conveyermakerkey_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -371,7 +439,8 @@
       "item.mindustryinminecraft.soundtrack_2": "Soundtrack 2",
       "item.mindustryinminecraft.scrap": "Scrap",
       "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
-      "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore"
+      "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore",
+      "key.mindustryinminecraft.conveyermakerkey": "Conveyermakerkey"
     }
   },
   "foldersRoot": {

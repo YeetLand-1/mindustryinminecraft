@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Conveyermakerkey",
+    "keyBindingCategoryKey": "inventory",
+    "onKeyPressed": {
+      "name": "ConveyermakerkeyOnKeyPressed"
+    }
+  }
+}

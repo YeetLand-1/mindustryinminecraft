@@ -3,8 +3,8 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "C",
-    "keyBindingName": "Conveyermakerkey",
-    "keyBindingCategoryKey": "inventory",
+    "keyBindingName": "Make Blocks",
+    "keyBindingCategoryKey": "mindustry",
     "onKeyPressed": {
       "name": "ConveyermakerkeyOnKeyPressed"
     }

@@ -535,28 +535,10 @@
       }
     },
     {
-      "name": "LogBlocks",
-      "type": "tag",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "log_blocks"
-    },
-    {
-      "name": "DirtBlocks",
-      "type": "tag",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "dirt_blocks"
-    },
-    {
       "name": "MakeRouter",
       "type": "procedure",
       "sortid": 36,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "make_router",

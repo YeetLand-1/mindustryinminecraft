@@ -1,0 +1,13 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}

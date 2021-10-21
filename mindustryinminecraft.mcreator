@@ -533,6 +533,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "DirtBlocks",
+      "type": "tag",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_blocks"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "log_blocks"
     }
   ],
   "variable_elements": [],

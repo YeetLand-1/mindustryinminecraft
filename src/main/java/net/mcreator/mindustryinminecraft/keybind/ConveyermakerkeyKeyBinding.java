@@ -39,7 +39,7 @@ public class ConveyermakerkeyKeyBinding extends MindustryinminecraftModElements.
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mindustryinminecraft.conveyermakerkey", GLFW.GLFW_KEY_C, "key.categories.inventory");
+		keys = new KeyBinding("key.mindustryinminecraft.conveyermakerkey", GLFW.GLFW_KEY_C, "key.categories.mindustry");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

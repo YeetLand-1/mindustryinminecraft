@@ -30,18 +30,32 @@
           "image": "block-conveyor-ui.png",
           "use1Xscale": false,
           "name": "block-conveyor-ui.png",
-          "x": -75,
-          "y": 35
+          "x": 141,
+          "y": 44
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "block-conveyor-ui.png",
+          "image": "block-router-ui.png",
           "use1Xscale": false,
-          "name": "block-conveyor-ui.png",
-          "x": 141,
+          "name": "block-router-ui.png",
+          "x": 195,
           "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Make",
+          "onClick": {
+            "name": "MakeRouter"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Make",
+          "x": 186,
+          "y": 80
         }
       }
     ],

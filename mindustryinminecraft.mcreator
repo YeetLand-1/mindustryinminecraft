@@ -38,15 +38,6 @@
       "registry_name": "conveyer"
     },
     {
-      "name": "ConveyorRight",
-      "type": "block",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "conveyor_right"
-    },
-    {
       "name": "Copper",
       "type": "item",
       "sortid": 5,
@@ -225,35 +216,6 @@
       "registry_name": "stone_copper_ore"
     },
     {
-      "name": "DrillUpdateTick_GenerateStuff",
-      "type": "procedure",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "drill_update_tick_generate_stuff",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "StoneLeadOre",
       "type": "block",
       "sortid": 18,
@@ -392,6 +354,185 @@
           }
         ]
       }
+    },
+    {
+      "name": "CopperDrilling",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_drilling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Drilling"
+    },
+    {
+      "name": "LeadDrilling",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lead_drilling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Drilling"
+    },
+    {
+      "name": "CoalDrilling",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coal_drilling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Drilling"
+    },
+    {
+      "name": "ScrapDrilling",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scrap_drilling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Drilling"
+    },
+    {
+      "name": "TitaniumDrilling",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "titanium_drilling",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Drilling"
+    },
+    {
+      "name": "DrillUpdateTick_GenerateStuff",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drill_update_tick_generate_stuff",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -424,7 +565,6 @@
       "subtitles.soundtrack2": "",
       "block.mindustryinmincraft.router": "Router",
       "item.mindustryinminecraft.copper": "Copper",
-      "block.mindustryinminecraft.conveyor_right": "Conveyor Right",
       "block.mindustryinminecraft.stone_lead_ore": "Stone Lead Ore",
       "block.mindustryinminecraft.stone_coal_ore": "Stone Coal Ore",
       "block.mindustryinminecraft.drill": "Drill",
@@ -445,7 +585,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Drilling",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "mindustryinminecraft",

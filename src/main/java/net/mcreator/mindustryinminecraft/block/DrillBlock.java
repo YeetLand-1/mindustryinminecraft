@@ -119,6 +119,14 @@ public class DrillBlock extends MindustryinminecraftModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 30);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				DrillMultiblockerProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -157,14 +165,6 @@ public class DrillBlock extends MindustryinminecraftModElements.ModElement {
 					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
 					world.addParticle(ParticleTypes.CLOUD, d0, d1, d2, d3, d4, d5);
 				}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				DrillMultiblockerProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

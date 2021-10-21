@@ -1,8 +1,11 @@
 package net.mcreator.mindustryinminecraft.procedures;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.block.Block;
 
+import net.mcreator.mindustryinminecraft.block.DrillBlock;
 import net.mcreator.mindustryinminecraft.block.Drill13Block;
 import net.mcreator.mindustryinminecraft.block.Drill12Block;
 import net.mcreator.mindustryinminecraft.block.Drill11Block;
@@ -37,8 +40,20 @@ public class DrillMultiblockerProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double Placed = 0;
-		world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), Drill13Block.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Drill11Block.block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)), Drill12Block.block.getDefaultState(), 3);
+		if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getMaterial() == net.minecraft.block.material.Material.AIR)
+				&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getMaterial() == net.minecraft.block.material.Material.AIR)
+						&& ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1))))
+								.getMaterial() == net.minecraft.block.material.Material.AIR)))) {
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), DrillBlock.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), Drill13Block.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), Drill11Block.block.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 1)), Drill12Block.block.getDefaultState(), 3);
+		} else {
+			if (world instanceof World) {
+				Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
+						new BlockPos((int) x, (int) y, (int) z));
+				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+			}
+		}
 	}
 }

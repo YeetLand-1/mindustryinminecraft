@@ -121,11 +121,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "DrillMultiblocker"
+    },
     "onTickUpdate": {
       "name": "DrillUpdateTick_GenerateStuff"
-    },
-    "onRandomUpdateEvent": {
-      "name": "DrillMultiblocker"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

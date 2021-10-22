@@ -48,7 +48,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.mindustryinminecraft.itemgroup.MindustryItemGroup;
-import net.mcreator.mindustryinminecraft.gui.RouterguiGui;
+import net.mcreator.mindustryinminecraft.gui.ConveyorGuiGui;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftModElements;
 
 import javax.annotation.Nullable;
@@ -118,7 +118,7 @@ public class ROUTERBlock extends MindustryinminecraftModElements.ModElement {
 
 					@Override
 					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new RouterguiGui.GuiContainerMod(id, inventory,
+						return new ConveyorGuiGui.GuiContainerMod(id, inventory,
 								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
 					}
 				}, new BlockPos(x, y, z));
@@ -177,7 +177,7 @@ public class ROUTERBlock extends MindustryinminecraftModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -235,12 +235,12 @@ public class ROUTERBlock extends MindustryinminecraftModElements.ModElement {
 
 		@Override
 		public int getInventoryStackLimit() {
-			return 1;
+			return 3;
 		}
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new RouterguiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return new ConveyorGuiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override
@@ -275,12 +275,6 @@ public class ROUTERBlock extends MindustryinminecraftModElements.ModElement {
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
-			if (index == 0)
-				return false;
-			if (index == 1)
-				return false;
-			if (index == 2)
-				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

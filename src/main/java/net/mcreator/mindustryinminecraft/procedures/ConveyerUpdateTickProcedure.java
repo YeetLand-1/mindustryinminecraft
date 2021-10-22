@@ -96,78 +96,13 @@ public class ConveyerUpdateTickProcedure {
 					}
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH)) {
-				if ((((new Object() {
-					public ItemStack getItemStack(BlockPos pos, int sltid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						TileEntity _ent = world.getTileEntity(pos);
-						if (_ent != null) {
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								_retval.set(capability.getStackInSlot(sltid).copy());
-							});
-						}
-						return _retval.get();
-					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem())
-						&& ((new Object() {
-							public int getAmount(IWorld world, BlockPos pos, int sltid) {
-								AtomicInteger _retval = new AtomicInteger(0);
-								TileEntity _ent = world.getTileEntity(pos);
-								if (_ent != null) {
-									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-										_retval.set(capability.getStackInSlot(sltid).getCount());
-									});
-								}
-								return _retval.get();
-							}
-						}.getAmount(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (0))) == 0))) {
-					{
-						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 1)));
-						if (_ent != null) {
-							final int _sltid = (int) (0);
-							final ItemStack _setstack = (new Object() {
-								public ItemStack getItemStack(BlockPos pos, int sltid) {
-									AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-									TileEntity _ent = world.getTileEntity(pos);
-									if (_ent != null) {
-										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-											_retval.set(capability.getStackInSlot(sltid).copy());
-										});
-									}
-									return _retval.get();
-								}
-							}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0)));
-							_setstack.setCount((int) 1);
-							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable) {
-									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-								}
-							});
-						}
-					}
-					if ((!((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
-							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
-							if (_ent != null) {
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									_retval.set(capability.getStackInSlot(sltid).copy());
-								});
-							}
-							return _retval.get();
-						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
-						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-							if (_ent != null) {
-								final int _sltid = (int) (0);
-								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-									if (capability instanceof IItemHandlerModifiable) {
-										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
-									}
-								});
-							}
-						}
-					}
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					SouthfacingProcedure.executeProcedure($_dependencies);
 				}
 			} else if (((new Object() {
 				public Direction getDirection(BlockPos pos) {

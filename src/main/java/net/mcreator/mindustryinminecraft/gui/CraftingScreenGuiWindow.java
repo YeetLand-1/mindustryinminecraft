@@ -34,8 +34,8 @@ public class CraftingScreenGuiWindow extends ContainerScreen<CraftingScreenGui.G
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
-		this.ySize = 166;
+		this.xSize = 310;
+		this.ySize = 186;
 	}
 	private static final ResourceLocation texture = new ResourceLocation("mindustryinminecraft:textures/crafting_screen.png");
 	@Override
@@ -55,9 +55,11 @@ public class CraftingScreenGuiWindow extends ContainerScreen<CraftingScreenGui.G
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("mindustryinminecraft:textures/block-conveyor-ui.png"));
-		this.blit(ms, this.guiLeft + 15, this.guiTop + 7, 0, 0, 32, 32, 32, 32);
+		this.blit(ms, this.guiLeft + 10, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("mindustryinminecraft:textures/block-router-ui.png"));
-		this.blit(ms, this.guiLeft + 69, this.guiTop + 7, 0, 0, 32, 32, 32, 32);
+		this.blit(ms, this.guiLeft + 64, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("mindustryinminecraft:textures/block-mechanical-drill-ui.png"));
+		this.blit(ms, this.guiLeft + 118, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
 		RenderSystem.disableBlend();
 	}
 
@@ -89,16 +91,34 @@ public class CraftingScreenGuiWindow extends ContainerScreen<CraftingScreenGui.G
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 6, this.guiTop + 43, 45, 20, new StringTextComponent("Make"), e -> {
+		this.addButton(new Button(this.guiLeft + 1, this.guiTop + 44, 45, 20, new StringTextComponent("Make"), e -> {
 			if (true) {
 				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(0, x, y, z));
 				CraftingScreenGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 43, 45, 20, new StringTextComponent("Make"), e -> {
+		this.addButton(new Button(this.guiLeft + 55, this.guiTop + 44, 45, 20, new StringTextComponent("Make"), e -> {
 			if (true) {
 				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(1, x, y, z));
 				CraftingScreenGui.handleButtonAction(entity, 1, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 253, this.guiTop + 116, 30, 20, new StringTextComponent(">"), e -> {
+			if (true) {
+				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(2, x, y, z));
+				CraftingScreenGui.handleButtonAction(entity, 2, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 109, this.guiTop + 44, 45, 20, new StringTextComponent("Make"), e -> {
+			if (true) {
+				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(3, x, y, z));
+				CraftingScreenGui.handleButtonAction(entity, 3, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 19, this.guiTop + 116, 30, 20, new StringTextComponent("<"), e -> {
+			if (true) {
+				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(4, x, y, z));
+				CraftingScreenGui.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
 	}

@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 310,
+    "height": 186,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -20,8 +20,8 @@
           "width": 45,
           "height": 20,
           "name": "Make",
-          "x": 132,
-          "y": 80
+          "x": 60,
+          "y": 71
         }
       },
       {
@@ -30,8 +30,8 @@
           "image": "block-conveyor-ui.png",
           "use1Xscale": false,
           "name": "block-conveyor-ui.png",
-          "x": 141,
-          "y": 44
+          "x": 69,
+          "y": 35
         }
       },
       {
@@ -40,8 +40,8 @@
           "image": "block-router-ui.png",
           "use1Xscale": false,
           "name": "block-router-ui.png",
-          "x": 195,
-          "y": 44
+          "x": 123,
+          "y": 35
         }
       },
       {
@@ -54,8 +54,54 @@
           "width": 45,
           "height": 20,
           "name": "Make",
-          "x": 186,
-          "y": 80
+          "x": 114,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 312,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block-mechanical-drill-ui.png",
+          "use1Xscale": true,
+          "name": "block-mechanical-drill-ui.png",
+          "x": 177,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Make",
+          "onClick": {
+            "name": "MakeDrill1"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Make",
+          "x": 168,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 78,
+          "y": 143
         }
       }
     ],

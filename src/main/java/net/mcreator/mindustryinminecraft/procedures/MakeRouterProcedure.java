@@ -1,25 +1,16 @@
 package net.mcreator.mindustryinminecraft.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.mindustryinminecraft.item.CopperItem;
-import net.mcreator.mindustryinminecraft.block.ROUTERBlock;
-import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
-
-import java.util.Map;
-
 public class MakeRouterProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
 				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency entity for procedure MakeRouter!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(CopperItem.block)) : false)) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(CopperItem.block);
@@ -33,4 +24,5 @@ public class MakeRouterProcedure {
 			}
 		}
 	}
+
 }

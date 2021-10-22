@@ -538,7 +538,7 @@
       "name": "MakeRouter",
       "type": "procedure",
       "sortid": 36,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "make_router",
@@ -580,6 +580,23 @@
         ]
       },
       "path": "~/Conveyor"
+    },
+    {
+      "name": "MakeDrill1",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "make_drill_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -627,18 +644,18 @@
       "item.mindustryinminecraft.scrap": "Scrap",
       "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
       "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore",
-      "key.mindustryinminecraft.conveyermakerkey": "Make Blocks"
+      "key.mindustryinminecraft.conveyermakerkey": "Conveyermakerkey"
     }
   },
   "foldersRoot": {
     "name": "~",
     "children": [
       {
-        "name": "Drilling",
+        "name": "Conveyor",
         "children": []
       },
       {
-        "name": "Conveyor",
+        "name": "Drilling",
         "children": []
       }
     ]

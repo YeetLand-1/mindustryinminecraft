@@ -28,6 +28,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.mindustryinminecraft.procedures.MakeRouterProcedure;
+import net.mcreator.mindustryinminecraft.procedures.MakeDrill1Procedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeConveyerProcedure;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftModElements;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
@@ -118,9 +119,9 @@ public class CraftingScreenGui extends MindustryinminecraftModElements.ModElemen
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 67 + 8 + sj * 18, 10 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+				this.addSlot(new Slot(inv, si, 67 + 8 + si * 18, 10 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -373,6 +374,13 @@ public class CraftingScreenGui extends MindustryinminecraftModElements.ModElemen
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				MakeRouterProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 3) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				MakeDrill1Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}

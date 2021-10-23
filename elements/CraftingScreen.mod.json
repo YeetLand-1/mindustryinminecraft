@@ -103,6 +103,30 @@
           "x": 78,
           "y": 143
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "block-junction-ui.png",
+          "use1Xscale": false,
+          "name": "block-junction-ui.png",
+          "x": 231,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Make",
+          "onClick": {
+            "name": "MakeJunction"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Make",
+          "x": 222,
+          "y": 71
+        }
       }
     ],
     "gridSettings": {

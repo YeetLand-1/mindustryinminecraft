@@ -535,13 +535,13 @@
       }
     },
     {
-      "name": "MakeRouter",
+      "name": "MakeDrill1",
       "type": "procedure",
-      "sortid": 36,
-      "compiles": false,
+      "sortid": 37,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "make_router",
+      "registry_name": "make_drill_1",
       "metadata": {
         "dependencies": [
           {
@@ -552,13 +552,13 @@
       }
     },
     {
-      "name": "MakeDrill1",
+      "name": "MakeRouter",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "make_drill_1",
+      "registry_name": "make_router",
       "metadata": {
         "dependencies": [
           {

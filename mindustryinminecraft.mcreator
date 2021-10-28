@@ -538,7 +538,7 @@
       "name": "MakeRouter",
       "type": "procedure",
       "sortid": 36,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "make_router",
@@ -644,7 +644,7 @@
       "item.mindustryinminecraft.scrap": "Scrap",
       "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
       "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore",
-      "key.mindustryinminecraft.conveyermakerkey": "Conveyermakerkey"
+      "key.mindustryinminecraft.conveyermakerkey": "Make Blocks"
     }
   },
   "foldersRoot": {

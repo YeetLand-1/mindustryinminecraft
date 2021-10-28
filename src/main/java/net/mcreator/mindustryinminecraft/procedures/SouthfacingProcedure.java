@@ -1,7 +1,25 @@
 package net.mcreator.mindustryinminecraft.procedures;
 
-public class SouthfacingProcedure {
+import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.CapabilityItemHandler;
 
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.mindustryinminecraft.block.ROUTERBlock;
+import net.mcreator.mindustryinminecraft.block.ConveyerBlock;
+import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
+
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Map;
+import java.util.HashMap;
+
+public class SouthfacingProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
@@ -23,24 +41,20 @@ public class SouthfacingProcedure {
 				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency world for procedure Southfacing!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		double slot = 0;
 		boolean itemset = false;
 		slot = (double) 0;
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
-
+			$_dependencies.put("world", world);
 			$_dependencies.put("x", x);
 			$_dependencies.put("y", y);
 			$_dependencies.put("z", z);
-			$_dependencies.put("world", world);
-
-			ConveyerValueProcedure.executeProcedure($_dependencies);
+			ConveyerUpdateTickProcedure.executeProcedure($_dependencies);
 		}
 		if (world instanceof World)
 			((World) world).notifyNeighborsOfStateChange(new BlockPos((int) x, (int) y, (int) z),
@@ -107,18 +121,24 @@ public class SouthfacingProcedure {
 				}
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-
+					$_dependencies.put("world", world);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-
-					ConveyerValueProcedure.executeProcedure($_dependencies);
+					ConveyerUpdateTickProcedure.executeProcedure($_dependencies);
 				}
 			}
 		} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CHEST)
 				|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.TRAPPED_CHEST))) {
 			while (((itemset == (false)) && (slot != 27))) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					ConveyerUpdateTickProcedure.executeProcedure($_dependencies);
+				}
 				if ((((new Object() {
 					public int getAmount(IWorld world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
@@ -210,16 +230,6 @@ public class SouthfacingProcedure {
 						return _retval.get();
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 1)), (int) (slot))).getItem() == (ItemStack.EMPTY).getItem()))) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						$_dependencies.put("world", world);
-
-						ConveyerValueProcedure.executeProcedure($_dependencies);
-					}
 					if (((new Object() {
 						public ItemStack getItemStack(BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -314,13 +324,11 @@ public class SouthfacingProcedure {
 							((World) world).getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlock());
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-
+					$_dependencies.put("world", world);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-
-					ConveyerValueProcedure.executeProcedure($_dependencies);
+					ConveyerUpdateTickProcedure.executeProcedure($_dependencies);
 				}
 			}
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == ROUTERBlock.block)) {
@@ -417,16 +425,13 @@ public class SouthfacingProcedure {
 				}
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-
+					$_dependencies.put("world", world);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-
-					ConveyerValueProcedure.executeProcedure($_dependencies);
+					ConveyerUpdateTickProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}
 	}
-
 }

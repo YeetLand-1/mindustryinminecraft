@@ -597,6 +597,32 @@
           }
         ]
       }
+    },
+    {
+      "name": "Junction",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "junction"
+    },
+    {
+      "name": "MakeJunction",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "make_junction",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -623,6 +649,7 @@
       "item.mindustryinminecraft.coal": "Coal",
       "item.mindustryinminecraft.soundtrack_1.desc": "First Mindustry Soundtrack",
       "block.mindustryinminecraft.conveyer": "Conveyer",
+      "block.mindustryinminecraft.junction": "Junction",
       "block.mindustryinminecraft.stone_scrap_ore": "Stone Scrap Ore",
       "item.mindustryinminecraft.titanium": "Titanium",
       "subtitles.soundtrack1": "",

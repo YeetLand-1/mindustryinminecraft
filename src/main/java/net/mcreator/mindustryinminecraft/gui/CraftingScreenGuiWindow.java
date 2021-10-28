@@ -60,6 +60,8 @@ public class CraftingScreenGuiWindow extends ContainerScreen<CraftingScreenGui.G
 		this.blit(ms, this.guiLeft + 64, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("mindustryinminecraft:textures/block-mechanical-drill-ui.png"));
 		this.blit(ms, this.guiLeft + 118, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("mindustryinminecraft:textures/block-junction-ui.png"));
+		this.blit(ms, this.guiLeft + 172, this.guiTop + 8, 0, 0, 32, 32, 32, 32);
 		RenderSystem.disableBlend();
 	}
 
@@ -119,6 +121,12 @@ public class CraftingScreenGuiWindow extends ContainerScreen<CraftingScreenGui.G
 			if (true) {
 				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(4, x, y, z));
 				CraftingScreenGui.handleButtonAction(entity, 4, x, y, z);
+			}
+		}));
+		this.addButton(new Button(this.guiLeft + 163, this.guiTop + 44, 45, 20, new StringTextComponent("Make"), e -> {
+			if (true) {
+				MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new CraftingScreenGui.ButtonPressedMessage(5, x, y, z));
+				CraftingScreenGui.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
 	}

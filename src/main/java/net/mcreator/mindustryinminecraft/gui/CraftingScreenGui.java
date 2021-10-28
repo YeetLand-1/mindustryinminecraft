@@ -28,6 +28,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.mindustryinminecraft.procedures.MakeRouterProcedure;
+import net.mcreator.mindustryinminecraft.procedures.MakeJunctionProcedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeDrill1Procedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeConveyerProcedure;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftModElements;
@@ -381,6 +382,13 @@ public class CraftingScreenGui extends MindustryinminecraftModElements.ModElemen
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				MakeDrill1Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 5) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				MakeJunctionProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

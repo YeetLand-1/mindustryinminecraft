@@ -8,7 +8,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
 
-import net.mcreator.mindustryinminecraft.item.CopperItem;
 import net.mcreator.mindustryinminecraft.item.CoalItem;
 import net.mcreator.mindustryinminecraft.block.StoneCoalOreBlock;
 import net.mcreator.mindustryinminecraft.block.ConveyerBlock;
@@ -270,7 +269,7 @@ public class CoalDrillingProcedure {
 							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
 								final int _sltid = (int) (slot);
-								final ItemStack _setstack = new ItemStack(CopperItem.block);
+								final ItemStack _setstack = new ItemStack(CoalItem.block);
 								_setstack.setCount((int) 1);
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {

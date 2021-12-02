@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "mindustryinminecraft:router",
+    "mindustryinminecraft:conveyer",
+    "mindustryinminecraft:drill",
+    "mindustryinminecraft:stone_copper_ore",
+    "mindustryinminecraft:stone_lead_ore",
+    "mindustryinminecraft:stone_coal_ore",
+    "mindustryinminecraft:stone_titanium_ore",
+    "mindustryinminecraft:stone_scrap_ore"
+  ]
+}

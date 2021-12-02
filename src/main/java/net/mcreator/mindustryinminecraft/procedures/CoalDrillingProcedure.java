@@ -3,79 +3,26 @@ package net.mcreator.mindustryinminecraft.procedures;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.mindustryinminecraft.item.CopperItem;
-import net.mcreator.mindustryinminecraft.item.CoalItem;
-import net.mcreator.mindustryinminecraft.block.StoneCoalOreBlock;
-import net.mcreator.mindustryinminecraft.block.ConveyerBlock;
-import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Map;
 
 public class CoalDrillingProcedure {
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency x for procedure CoalDrilling!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency y for procedure CoalDrilling!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency z for procedure CoalDrilling!");
-			return;
-		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency world for procedure CoalDrilling!");
-			return;
-		}
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		boolean Itemset = false;
 		double slot = 0;
-		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == StoneCoalOreBlock.block)) {
-			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == ConveyerBlock.block) && ((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
-					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
-					return _retval.get();
-				}
-			}.getItemStack(new BlockPos((int) (x - 1), (int) y, (int) z), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
-				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
-					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
-						});
-					}
-				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)
-					&& ((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == MindustryinminecraftModBlocks.STONE_COAL_ORE) {
+			if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
+							BlockEntity _ent = world.getBlockEntity(pos);
 							if (_ent != null) {
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									_retval.set(capability.getStackInSlot(sltid).copy());
@@ -83,13 +30,13 @@ public class CoalDrillingProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
+					}.getItemStack(world, new BlockPos((int) (x - 1), (int) y, (int) z), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
 				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)));
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x - 1), (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -97,36 +44,11 @@ public class CoalDrillingProcedure {
 						});
 					}
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 2)))).getBlock() == ConveyerBlock.block) && ((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
-					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
-					return _retval.get();
-				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) (z - 2)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
-				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z - 2)));
-					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
-						});
-					}
-				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 2)))).getBlock() == ConveyerBlock.block)
-					&& ((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
+			} else if ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
+							BlockEntity _ent = world.getBlockEntity(pos);
 							if (_ent != null) {
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									_retval.set(capability.getStackInSlot(sltid).copy());
@@ -134,13 +56,13 @@ public class CoalDrillingProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) (x + 1), (int) y, (int) (z - 2)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
+					}.getItemStack(world, new BlockPos((int) (x - 1), (int) y, (int) (z - 1)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
 				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 2)));
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x - 1), (int) y, (int) (z - 1)));
 					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -148,11 +70,11 @@ public class CoalDrillingProcedure {
 						});
 					}
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) (z - 1)))).getBlock() == ConveyerBlock.block)
-					&& ((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
+			} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 2)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
+							BlockEntity _ent = world.getBlockEntity(pos);
 							if (_ent != null) {
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									_retval.set(capability.getStackInSlot(sltid).copy());
@@ -160,13 +82,13 @@ public class CoalDrillingProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) (x + 2), (int) y, (int) (z - 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
+					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) (z - 2)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
 				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 2), (int) y, (int) (z - 1)));
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) (z - 2)));
 					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -174,36 +96,11 @@ public class CoalDrillingProcedure {
 						});
 					}
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) z))).getBlock() == ConveyerBlock.block) && ((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
-					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
-					if (_ent != null) {
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
-						});
-					}
-					return _retval.get();
-				}
-			}.getItemStack(new BlockPos((int) (x + 2), (int) y, (int) z), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
-				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 2), (int) y, (int) z));
-					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
-						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							if (capability instanceof IItemHandlerModifiable) {
-								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
-							}
-						});
-					}
-				}
-			} else if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block)
-					&& ((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
+			} else if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z - 2)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
+							BlockEntity _ent = world.getBlockEntity(pos);
 							if (_ent != null) {
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									_retval.set(capability.getStackInSlot(sltid).copy());
@@ -211,13 +108,13 @@ public class CoalDrillingProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
+					}.getItemStack(world, new BlockPos((int) (x + 1), (int) y, (int) (z - 2)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
 				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)));
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x + 1), (int) y, (int) (z - 2)));
 					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -225,24 +122,103 @@ public class CoalDrillingProcedure {
 						});
 					}
 				}
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == ConveyerBlock.block) && ((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
-					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+			} else if ((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) (z - 1)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).copy());
+								});
+							}
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos((int) (x + 2), (int) y, (int) (z - 1)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x + 2), (int) y, (int) (z - 1)));
 					if (_ent != null) {
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-							_retval.set(capability.getStackInSlot(sltid).copy());
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
 						});
 					}
-					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) (z + 1)), (int) (0))).getItem() == (ItemStack.EMPTY).getItem()))) {
+			} else if ((world.getBlockState(new BlockPos((int) (x + 2), (int) y, (int) z))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).copy());
+								});
+							}
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos((int) (x + 2), (int) y, (int) z), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
 				{
-					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x + 2), (int) y, (int) z));
 					if (_ent != null) {
-						final int _sltid = (int) (0);
-						final ItemStack _setstack = new ItemStack(CoalItem.block);
-						_setstack.setCount((int) 1);
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).copy());
+								});
+							}
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos((int) (x + 1), (int) y, (int) (z + 1)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) (x + 1), (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							if (capability instanceof IItemHandlerModifiable) {
+								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+							}
+						});
+					}
+				}
+			} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == MindustryinminecraftModBlocks.CONVEYER
+					&& (new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
+							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+							BlockEntity _ent = world.getBlockEntity(pos);
+							if (_ent != null) {
+								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+									_retval.set(capability.getStackInSlot(sltid).copy());
+								});
+							}
+							return _retval.get();
+						}
+					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) (z + 1)), 0)).getItem() == (ItemStack.EMPTY).getItem()) {
+				{
+					BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					if (_ent != null) {
+						final int _sltid = 0;
+						final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COAL);
+						_setstack.setCount(1);
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable) {
 								((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -251,11 +227,11 @@ public class CoalDrillingProcedure {
 					}
 				}
 			} else {
-				while (((Itemset == (false)) && (slot != 10))) {
-					if ((!((new Object() {
-						public ItemStack getItemStack(BlockPos pos, int sltid) {
+				while (Itemset == false && slot != 10) {
+					if (!((new Object() {
+						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-							TileEntity _ent = world.getTileEntity(pos);
+							BlockEntity _ent = world.getBlockEntity(pos);
 							if (_ent != null) {
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									_retval.set(capability.getStackInSlot(sltid).copy());
@@ -263,15 +239,15 @@ public class CoalDrillingProcedure {
 							}
 							return _retval.get();
 						}
-					}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (slot))).getItem() == (ItemStack.EMPTY).getItem()))) {
+					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), (int) slot)).getItem() == (ItemStack.EMPTY).getItem())) {
 						slot = (double) (slot + 1);
 					} else {
 						{
-							TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 							if (_ent != null) {
-								final int _sltid = (int) (slot);
-								final ItemStack _setstack = new ItemStack(CopperItem.block);
-								_setstack.setCount((int) 1);
+								final int _sltid = (int) slot;
+								final ItemStack _setstack = new ItemStack(MindustryinminecraftModItems.COPPER);
+								_setstack.setCount(1);
 								_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 									if (capability instanceof IItemHandlerModifiable) {
 										((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

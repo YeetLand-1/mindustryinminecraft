@@ -2,34 +2,29 @@ package net.mcreator.mindustryinminecraft.procedures;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
-import net.mcreator.mindustryinminecraft.item.CopperItem;
-import net.mcreator.mindustryinminecraft.block.DrillBlock;
-import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
-
-import java.util.Map;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
 
 public class MakeDrill1Procedure {
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				MindustryinminecraftMod.LOGGER.warn("Failed to load dependency entity for procedure MakeDrill1!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(CopperItem.block)) : false)) {
-			if (entity instanceof PlayerEntity) {
-				ItemStack _stktoremove = new ItemStack(CopperItem.block);
-				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 12,
-						((PlayerEntity) entity).container.func_234641_j_());
+		if (entity instanceof Player _playerHasItem
+				? _playerHasItem.getInventory().contains(new ItemStack(MindustryinminecraftModItems.COPPER))
+				: false) {
+			if (entity instanceof Player _player) {
+				ItemStack _stktoremove = new ItemStack(MindustryinminecraftModItems.COPPER);
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 12,
+						_player.inventoryMenu.getCraftSlots());
 			}
-			if (entity instanceof PlayerEntity) {
-				ItemStack _setstack = new ItemStack(DrillBlock.block);
-				_setstack.setCount((int) 1);
-				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(MindustryinminecraftModBlocks.DRILL);
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		}
 	}

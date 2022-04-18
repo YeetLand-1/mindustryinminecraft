@@ -12,10 +12,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.mindustryinminecraft.world.inventory.CraftingScreenMenu;
-import net.mcreator.mindustryinminecraft.procedures.MakeRouterProcedure;
-import net.mcreator.mindustryinminecraft.procedures.MakeJunctionProcedure;
-import net.mcreator.mindustryinminecraft.procedures.MakeDrill1Procedure;
-import net.mcreator.mindustryinminecraft.procedures.MakeConveyerProcedure;
+import net.mcreator.mindustryinminecraft.procedures.CraftRouterProcedure;
+import net.mcreator.mindustryinminecraft.procedures.CraftJunctionProcedure;
+import net.mcreator.mindustryinminecraft.procedures.CraftDrillProcedure;
+import net.mcreator.mindustryinminecraft.procedures.CraftConveyerProcedure;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
 import java.util.function.Supplier;
@@ -67,19 +67,19 @@ public class CraftingScreenButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			MakeConveyerProcedure.execute(entity);
+			CraftConveyerProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			MakeRouterProcedure.execute(entity);
+			CraftRouterProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			MakeDrill1Procedure.execute(entity);
+			CraftDrillProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			MakeJunctionProcedure.execute(entity);
+			CraftJunctionProcedure.execute(entity);
 		}
 	}
 

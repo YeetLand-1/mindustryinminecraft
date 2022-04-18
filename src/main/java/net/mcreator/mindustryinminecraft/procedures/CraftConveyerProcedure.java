@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
 
-public class MakeDrill1Procedure {
+public class CraftConveyerProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
@@ -18,11 +18,11 @@ public class MakeDrill1Procedure {
 				: false) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(MindustryinminecraftModItems.COPPER);
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 12,
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
 						_player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(MindustryinminecraftModBlocks.DRILL);
+				ItemStack _setstack = new ItemStack(MindustryinminecraftModBlocks.CONVEYER);
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
 
-public class MakeRouterProcedure {
+public class CraftRouterProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

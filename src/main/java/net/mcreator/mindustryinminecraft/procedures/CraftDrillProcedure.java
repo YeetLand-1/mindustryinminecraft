@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
 
-public class MakeJunctionProcedure {
+public class CraftDrillProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
@@ -18,11 +18,11 @@ public class MakeJunctionProcedure {
 				: false) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = new ItemStack(MindustryinminecraftModItems.COPPER);
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 2,
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 12,
 						_player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(MindustryinminecraftModBlocks.JUNCTION);
+				ItemStack _setstack = new ItemStack(MindustryinminecraftModBlocks.DRILL);
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

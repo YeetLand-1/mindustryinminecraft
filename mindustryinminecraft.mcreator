@@ -262,22 +262,6 @@
       "registry_name": "lead_1"
     },
     {
-      "name": "MakeConveyer",
-      "type": "procedure",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "make_conveyer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "CraftingScreen",
       "type": "gui",
       "sortid": 27,
@@ -499,22 +483,6 @@
       }
     },
     {
-      "name": "MakeRouter",
-      "type": "procedure",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "make_router",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Southfacing",
       "type": "procedure",
       "sortid": 37,
@@ -540,23 +508,6 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Conveyor"
-    },
-    {
-      "name": "MakeDrill1",
-      "type": "procedure",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "make_drill_1",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
       }
     },
     {
@@ -568,12 +519,12 @@
       "registry_name": "junction"
     },
     {
-      "name": "MakeJunction",
+      "name": "CraftConveyer",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "make_junction",
+      "registry_name": "craft_conveyer",
       "metadata": {
         "dependencies": [
           {
@@ -581,7 +532,88 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "CraftRouter",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_router",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "CraftDrill",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_drill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "CraftJunction",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_junction",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "Junctionwork",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "junctionwork",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
     }
   ],
   "variable_elements": [],
@@ -637,15 +669,11 @@
     "name": "~",
     "children": [
       {
-        "name": "Conveyor",
+        "name": "Crafting Recipies",
         "children": []
       },
       {
         "name": "Drilling",
-        "children": []
-      },
-      {
-        "name": "Crafting Recipies",
         "children": []
       }
     ]
@@ -669,5 +697,5 @@
     "modElementsPackage": "net.mcreator.mindustryinminecraft",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100354000
+  "mcreatorVersion": 202100236710
 }

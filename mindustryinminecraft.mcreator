@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "Mindustry",
@@ -7,7 +6,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mindustry"
     },
     {
@@ -16,7 +14,6 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "router"
     },
     {
@@ -25,7 +22,6 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "routergui"
     },
     {
@@ -34,7 +30,6 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyer"
     },
     {
@@ -43,7 +38,6 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "copper"
     },
     {
@@ -52,7 +46,6 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyer_update_tick",
       "metadata": {
         "dependencies": [
@@ -81,7 +74,6 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyor_gui"
     },
     {
@@ -90,7 +82,6 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "soundtrack_1"
     },
     {
@@ -99,7 +90,6 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "soundtrack_2"
     },
     {
@@ -108,7 +98,6 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyer_value",
       "metadata": {
         "return_type": "number",
@@ -138,7 +127,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drillgui"
     },
     {
@@ -147,7 +135,6 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill"
     },
     {
@@ -156,7 +143,6 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_multiblocker",
       "metadata": {
         "dependencies": [
@@ -185,7 +171,6 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_11"
     },
     {
@@ -194,7 +179,6 @@
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_12"
     },
     {
@@ -203,7 +187,6 @@
       "sortid": 16,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_13"
     },
     {
@@ -212,7 +195,6 @@
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stone_copper_ore"
     },
     {
@@ -221,7 +203,6 @@
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stone_lead_ore"
     },
     {
@@ -230,7 +211,6 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stone_coal_ore"
     },
     {
@@ -239,7 +219,6 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stone_titanium_ore"
     },
     {
@@ -248,7 +227,6 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "stone_scrap_ore"
     },
     {
@@ -257,7 +235,6 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "titanium"
     },
     {
@@ -266,7 +243,6 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "scrap"
     },
     {
@@ -275,7 +251,6 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "coal"
     },
     {
@@ -284,7 +259,6 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "lead_1"
     },
     {
@@ -293,7 +267,6 @@
       "sortid": 26,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "make_conveyer",
       "metadata": {
         "dependencies": [
@@ -310,7 +283,6 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "crafting_screen"
     },
     {
@@ -319,7 +291,6 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyermakerkey"
     },
     {
@@ -328,7 +299,6 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "conveyermakerkey_on_key_pressed",
       "metadata": {
         "dependencies": [
@@ -361,7 +331,6 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "copper_drilling",
       "metadata": {
         "dependencies": [
@@ -391,7 +360,6 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "lead_drilling",
       "metadata": {
         "dependencies": [
@@ -421,7 +389,6 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "coal_drilling",
       "metadata": {
         "dependencies": [
@@ -451,7 +418,6 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "scrap_drilling",
       "metadata": {
         "dependencies": [
@@ -481,7 +447,6 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "titanium_drilling",
       "metadata": {
         "dependencies": [
@@ -511,7 +476,6 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "drill_update_tick_generate_stuff",
       "metadata": {
         "dependencies": [
@@ -540,7 +504,6 @@
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "make_router",
       "metadata": {
         "dependencies": [
@@ -557,7 +520,6 @@
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "southfacing",
       "metadata": {
         "dependencies": [
@@ -587,7 +549,6 @@
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "make_drill_1",
       "metadata": {
         "dependencies": [
@@ -604,7 +565,6 @@
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "junction"
     },
     {
@@ -613,7 +573,6 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "make_junction",
       "metadata": {
         "dependencies": [
@@ -684,6 +643,10 @@
       {
         "name": "Drilling",
         "children": []
+      },
+      {
+        "name": "Crafting Recipies",
+        "children": []
       }
     ]
   },
@@ -706,5 +669,5 @@
     "modElementsPackage": "net.mcreator.mindustryinminecraft",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100349312
+  "mcreatorVersion": 202100354000
 }

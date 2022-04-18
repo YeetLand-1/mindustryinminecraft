@@ -241,7 +241,7 @@ public class CopperDrillingProcedure {
 							return _retval.get();
 						}
 					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), (int) Slot)).getItem() == (ItemStack.EMPTY).getItem())) {
-						Slot = (double) (Slot + 1);
+						Slot = Slot + 1;
 					} else {
 						{
 							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
@@ -256,7 +256,7 @@ public class CopperDrillingProcedure {
 								});
 							}
 						}
-						Itemset = (boolean) (true);
+						Itemset = true;
 					}
 				}
 			}

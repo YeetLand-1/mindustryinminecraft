@@ -240,7 +240,7 @@ public class TitaniumDrillingProcedure {
 							return _retval.get();
 						}
 					}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), (int) slot)).getItem() == (ItemStack.EMPTY).getItem())) {
-						slot = (double) (slot + 1);
+						slot = slot + 1;
 					} else {
 						{
 							BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
@@ -255,7 +255,7 @@ public class TitaniumDrillingProcedure {
 								});
 							}
 						}
-						Itemset = (boolean) (true);
+						Itemset = true;
 					}
 				}
 			}

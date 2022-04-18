@@ -15,13 +15,10 @@ import net.mcreator.mindustryinminecraft.world.inventory.CraftingScreenMenu;
 import net.mcreator.mindustryinminecraft.network.CraftingScreenButtonMessage;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CraftingScreenScreen extends AbstractContainerScreen<CraftingScreenMenu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

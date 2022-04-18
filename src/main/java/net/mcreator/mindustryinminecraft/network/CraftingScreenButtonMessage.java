@@ -11,11 +11,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.mindustryinminecraft.world.inventory.CraftingScreenMenu;
 import net.mcreator.mindustryinminecraft.procedures.MakeRouterProcedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeJunctionProcedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeDrill1Procedure;
 import net.mcreator.mindustryinminecraft.procedures.MakeConveyerProcedure;
-import net.mcreator.mindustryinminecraft.client.gui.CraftingScreenScreen;
 import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
 import java.util.function.Supplier;
@@ -61,7 +61,7 @@ public class CraftingScreenButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = CraftingScreenScreen.guistate;
+		HashMap guistate = CraftingScreenMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;

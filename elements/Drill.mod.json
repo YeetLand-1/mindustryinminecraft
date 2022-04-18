@@ -13,7 +13,7 @@
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "block-mechanical-drill-ui",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

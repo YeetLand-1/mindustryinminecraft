@@ -11,13 +11,10 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.mindustryinminecraft.world.inventory.DrillguiMenu;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class DrillguiScreen extends AbstractContainerScreen<DrillguiMenu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -68,7 +65,7 @@ public class DrillguiScreen extends AbstractContainerScreen<DrillguiMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		drawString(poseStack, this.font, "Drill", 78, 7, -12829636);
+		this.font.draw(poseStack, "Drill", 78, 7, -12829636);
 	}
 
 	@Override

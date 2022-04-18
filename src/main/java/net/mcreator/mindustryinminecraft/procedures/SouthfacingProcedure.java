@@ -19,7 +19,7 @@ public class SouthfacingProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double slot = 0;
 		boolean itemset = false;
-		slot = (double) 0;
+		slot = 0;
 		ConveyerUpdateTickProcedure.execute(world, x, y, z);
 		if (world instanceof Level _level)
 			_level.updateNeighborsAt(new BlockPos((int) x, (int) y, (int) z),
@@ -135,7 +135,7 @@ public class SouthfacingProcedure {
 						return _retval.get();
 					}
 				}.getItemStack(world, new BlockPos((int) x, (int) y, (int) (z - 1)), (int) slot)).getItem())) {
-					slot = (double) (slot + 1);
+					slot = slot + 1;
 				} else if (new Object() {
 					public int getAmount(LevelAccessor world, BlockPos pos, int sltid) {
 						AtomicInteger _retval = new AtomicInteger(0);
@@ -268,7 +268,7 @@ public class SouthfacingProcedure {
 							});
 						}
 					}
-					itemset = (boolean) (true);
+					itemset = true;
 				}
 				if (world instanceof Level _level)
 					_level.updateNeighborsAt(new BlockPos((int) x, (int) y, (int) (z + 1)),

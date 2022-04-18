@@ -11,13 +11,10 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.mindustryinminecraft.world.inventory.ConveyorGuiMenu;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class ConveyorGuiScreen extends AbstractContainerScreen<ConveyorGuiMenu> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;

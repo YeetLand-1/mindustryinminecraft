@@ -7,6 +7,7 @@
   "item.mindustryinminecraft.titanium": "Titanium",
   "subtitles.soundtrack1": "",
   "subtitles.soundtrack2": "",
+  "key.mindustryinminecraft.craftingmenustuf": "Make Blocks",
   "block.mindustryinmincraft.router": "Router",
   "item.mindustryinminecraft.copper": "Copper",
   "block.mindustryinminecraft.stone_lead_ore": "Stone Lead Ore",
@@ -14,6 +15,7 @@
   "block.mindustryinminecraft.drill": "Drill",
   "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
   "item.mindustryinminecraft.lead_1": "Lead",
+  "block.mindustryinminecraft.turret_1": "Turret 1",
   "itemGroup.tabmindustry": "Mindustry",
   "item.mindustryinminecraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
   "block.mindustryinminecraft.router": "Router",
@@ -23,6 +25,5 @@
   "item.mindustryinminecraft.soundtrack_2": "Soundtrack 2",
   "item.mindustryinminecraft.scrap": "Scrap",
   "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
-  "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore",
-  "key.mindustryinminecraft.conveyermakerkey": "Make Blocks"
+  "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore"
 }

@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.mindustryinminecraft.procedures.JunctionworkProcedure;
+import net.mcreator.mindustryinminecraft.procedures.JunctionstuffProcedure;
 
 import java.util.Random;
 import java.util.List;
@@ -51,7 +51,7 @@ public class JunctionBlock extends Block {
 		int y = pos.getY();
 		int z = pos.getZ();
 
-		JunctionworkProcedure.execute(world, x, y, z);
+		JunctionstuffProcedure.execute(world, x, y, z);
 		world.getBlockTicks().scheduleTick(pos, this, 10);
 	}
 }

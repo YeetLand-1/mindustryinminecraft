@@ -47,6 +47,7 @@ public class MindustryinminecraftModItems {
 	public static final Item COAL = register(new CoalItem());
 	public static final Item LEAD_1 = register(new Lead1Item());
 	public static final Item JUNCTION = register(MindustryinminecraftModBlocks.JUNCTION, MindustryinminecraftModTabs.TAB_MINDUSTRY);
+	public static final Item TURRET_1 = register(MindustryinminecraftModBlocks.TURRET_1, MindustryinminecraftModTabs.TAB_MINDUSTRY);
 
 	private static Item register(Item item) {
 		REGISTRY.add(item);

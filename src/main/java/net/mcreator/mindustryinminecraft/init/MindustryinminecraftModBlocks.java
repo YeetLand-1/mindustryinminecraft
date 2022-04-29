@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.mindustryinminecraft.block.Turret1Block;
 import net.mcreator.mindustryinminecraft.block.StoneTitaniumOreBlock;
 import net.mcreator.mindustryinminecraft.block.StoneScrapOreBlock;
 import net.mcreator.mindustryinminecraft.block.StoneLeadOreBlock;
@@ -43,6 +44,7 @@ public class MindustryinminecraftModBlocks {
 	public static final Block STONE_TITANIUM_ORE = register(new StoneTitaniumOreBlock());
 	public static final Block STONE_SCRAP_ORE = register(new StoneScrapOreBlock());
 	public static final Block JUNCTION = register(new JunctionBlock());
+	public static final Block TURRET_1 = register(new Turret1Block());
 
 	private static Block register(Block block) {
 		REGISTRY.add(block);
@@ -59,6 +61,7 @@ public class MindustryinminecraftModBlocks {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ConveyerBlock.registerRenderLayer();
+			Turret1Block.registerRenderLayer();
 		}
 	}
 }

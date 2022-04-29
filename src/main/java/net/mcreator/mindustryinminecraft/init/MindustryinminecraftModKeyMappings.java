@@ -21,12 +21,12 @@ import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class MindustryinminecraftModKeyMappings {
-	public static final KeyMapping CONVEYERMAKERKEY = new KeyMapping("key.mindustryinminecraft.conveyermakerkey", GLFW.GLFW_KEY_C,
+	public static final KeyMapping CRAFTINGMENUSTUF = new KeyMapping("key.mindustryinminecraft.craftingmenustuf", GLFW.GLFW_KEY_C,
 			"key.categories.mindustry");
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {
-		ClientRegistry.registerKeyBinding(CONVEYERMAKERKEY);
+		ClientRegistry.registerKeyBinding(CRAFTINGMENUSTUF);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -34,7 +34,7 @@ public class MindustryinminecraftModKeyMappings {
 		@SubscribeEvent
 		public static void onKeyInput(InputEvent.KeyInputEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				if (event.getKey() == CONVEYERMAKERKEY.getKey().getValue()) {
+				if (event.getKey() == CRAFTINGMENUSTUF.getKey().getValue()) {
 					if (event.getAction() == GLFW.GLFW_PRESS) {
 						MindustryinminecraftMod.PACKET_HANDLER.sendToServer(new ConveyermakerkeyMessage(0, 0));
 						ConveyermakerkeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);

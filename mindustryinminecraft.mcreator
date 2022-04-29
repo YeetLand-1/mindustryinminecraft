@@ -275,7 +275,7 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "conveyermakerkey"
+      "registry_name": "craftingmenustuf"
     },
     {
       "name": "ConveyermakerkeyOnKeyPressed",
@@ -511,54 +511,12 @@
       }
     },
     {
-      "name": "Junction",
-      "type": "block",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "junction"
-    },
-    {
-      "name": "CraftConveyer",
-      "type": "procedure",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "craft_conveyer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Crafting Recipies"
-    },
-    {
       "name": "CraftRouter",
       "type": "procedure",
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "craft_router",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Crafting Recipies"
-    },
-    {
-      "name": "CraftDrill",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "craft_drill",
       "metadata": {
         "dependencies": [
           {
@@ -587,12 +545,62 @@
       "path": "~/Crafting Recipies"
     },
     {
-      "name": "Junctionwork",
-      "type": "procedure",
-      "sortid": 44,
+      "name": "Junction",
+      "type": "block",
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "junctionwork",
+      "registry_name": "junction"
+    },
+    {
+      "name": "CraftConveyer",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_conveyer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "CraftDrill",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_drill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Crafting Recipies"
+    },
+    {
+      "name": "Turret1",
+      "type": "block",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_1"
+    },
+    {
+      "name": "Junctionstuff",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "junctionstuff",
       "metadata": {
         "dependencies": [
           {
@@ -645,6 +653,7 @@
       "item.mindustryinminecraft.titanium": "Titanium",
       "subtitles.soundtrack1": "",
       "subtitles.soundtrack2": "",
+      "key.mindustryinminecraft.craftingmenustuf": "Make Blocks",
       "block.mindustryinmincraft.router": "Router",
       "item.mindustryinminecraft.copper": "Copper",
       "block.mindustryinminecraft.stone_lead_ore": "Stone Lead Ore",
@@ -652,6 +661,7 @@
       "block.mindustryinminecraft.drill": "Drill",
       "block.mindustryinminecraft.stone_copper_ore": "Stone Copper Ore",
       "item.mindustryinminecraft.lead_1": "Lead",
+      "block.mindustryinminecraft.turret_1": "Turret 1",
       "itemGroup.tabmindustry": "Mindustry",
       "item.mindustryinminecraft.soundtrack_2.desc": "Second Mindustry Soundtrack",
       "block.mindustryinminecraft.router": "Router",
@@ -661,8 +671,7 @@
       "item.mindustryinminecraft.soundtrack_2": "Soundtrack 2",
       "item.mindustryinminecraft.scrap": "Scrap",
       "item.mindustryinminecraft.soundtrack_1": "Soundtrack 1",
-      "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore",
-      "key.mindustryinminecraft.conveyermakerkey": "Make Blocks"
+      "block.mindustryinminecraft.stone_titanium_ore": "Stone Titanium Ore"
     }
   },
   "foldersRoot": {
@@ -697,5 +706,5 @@
     "modElementsPackage": "net.mcreator.mindustryinminecraft",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100236710
+  "mcreatorVersion": 202100354000
 }

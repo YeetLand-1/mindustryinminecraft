@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mindustryinminecraft:blocks/block-router-ui_1",
+    "particle": "mindustryinminecraft:blocks/block-router-ui_1"
+  }
+}

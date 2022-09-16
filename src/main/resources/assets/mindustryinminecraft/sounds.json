@@ -1,0 +1,20 @@
+{
+  "soundtrack1": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "mindustryinminecraft:mindustry_soundtrack___game1",
+        "stream": true
+      }
+    ]
+  },
+  "soundtrack2": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "mindustryinminecraft:mindustry_soundtrack___game2",
+        "stream": true
+      }
+    ]
+  }
+}

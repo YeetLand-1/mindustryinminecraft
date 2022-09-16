@@ -17,7 +17,7 @@ public class MindustryinminecraftModTabs {
 		TAB_MINDUSTRY = new CreativeModeTab("tabmindustry") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(MindustryinminecraftModBlocks.CONVEYER);
+				return new ItemStack(MindustryinminecraftModBlocks.CONVEYER.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

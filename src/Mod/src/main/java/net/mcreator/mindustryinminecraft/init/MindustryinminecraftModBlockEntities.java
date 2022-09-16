@@ -4,9 +4,9 @@
  */
 package net.mcreator.mindustryinminecraft.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
@@ -14,27 +14,18 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.mindustryinminecraft.block.entity.ROUTERBlockEntity;
 import net.mcreator.mindustryinminecraft.block.entity.DrillBlockEntity;
 import net.mcreator.mindustryinminecraft.block.entity.ConveyerBlockEntity;
+import net.mcreator.mindustryinminecraft.MindustryinminecraftMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MindustryinminecraftModBlockEntities {
-	private static final List<BlockEntityType<?>> REGISTRY = new ArrayList<>();
-	public static final BlockEntityType<?> ROUTER = register("mindustryinminecraft:router", MindustryinminecraftModBlocks.ROUTER,
-			ROUTERBlockEntity::new);
-	public static final BlockEntityType<?> CONVEYER = register("mindustryinminecraft:conveyer", MindustryinminecraftModBlocks.CONVEYER,
+	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES,
+			MindustryinminecraftMod.MODID);
+	public static final RegistryObject<BlockEntityType<?>> ROUTER = register("router", MindustryinminecraftModBlocks.ROUTER, ROUTERBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> CONVEYER = register("conveyer", MindustryinminecraftModBlocks.CONVEYER,
 			ConveyerBlockEntity::new);
-	public static final BlockEntityType<?> DRILL = register("mindustryinminecraft:drill", MindustryinminecraftModBlocks.DRILL, DrillBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> DRILL = register("drill", MindustryinminecraftModBlocks.DRILL, DrillBlockEntity::new);
 
-	private static BlockEntityType<?> register(String registryname, Block block, BlockEntityType.BlockEntitySupplier<?> supplier) {
-		BlockEntityType<?> blockEntityType = BlockEntityType.Builder.of(supplier, block).build(null).setRegistryName(registryname);
-		REGISTRY.add(blockEntityType);
-		return blockEntityType;
-	}
-
-	@SubscribeEvent
-	public static void registerTileEntity(RegistryEvent.Register<BlockEntityType<?>> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new BlockEntityType[0]));
+	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block,
+			BlockEntityType.BlockEntitySupplier<?> supplier) {
+		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}
 }

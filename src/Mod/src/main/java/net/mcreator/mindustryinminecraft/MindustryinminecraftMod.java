@@ -16,15 +16,21 @@ package net.mcreator.mindustryinminecraft;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModTabs;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModItems;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModFeatures;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlocks;
+import net.mcreator.mindustryinminecraft.init.MindustryinminecraftModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -41,6 +47,13 @@ public class MindustryinminecraftMod {
 
 	public MindustryinminecraftMod() {
 		MindustryinminecraftModTabs.load();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		MindustryinminecraftModBlocks.REGISTRY.register(bus);
+		MindustryinminecraftModItems.REGISTRY.register(bus);
+
+		MindustryinminecraftModBlockEntities.REGISTRY.register(bus);
+		MindustryinminecraftModFeatures.REGISTRY.register(bus);
+
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

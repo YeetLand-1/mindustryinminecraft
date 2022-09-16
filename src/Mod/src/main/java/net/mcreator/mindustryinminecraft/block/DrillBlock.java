@@ -1,57 +1,18 @@
 
 package net.mcreator.mindustryinminecraft.block;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.TieredItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Containers;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.mindustryinminecraft.world.inventory.DrillguiMenu;
-import net.mcreator.mindustryinminecraft.procedures.DrillUpdateTick_GenerateStuffProcedure;
-import net.mcreator.mindustryinminecraft.procedures.DrillMultiblockerProcedure;
-import net.mcreator.mindustryinminecraft.block.entity.DrillBlockEntity;
-
-import java.util.Random;
-import java.util.List;
-import java.util.Collections;
-
-import io.netty.buffer.Unpooled;
 
 public class DrillBlock extends Block
 		implements
 
 			EntityBlock {
+
 	public DrillBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f).requiresCorrectToolForDrops());
-		setRegistryName("drill");
+
 	}
 
 	@Override
@@ -61,13 +22,14 @@ public class DrillBlock extends Block
 
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+		if (player.getInventory().getSelected().getItem() instanceof TieredItem tieredItem)
 			return tieredItem.getTier().getLevel() >= 1;
 		return false;
 	}
 
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -77,7 +39,7 @@ public class DrillBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.getBlockTicks().scheduleTick(pos, this, 30);
+		world.scheduleTick(pos, this, 30);
 		DrillMultiblockerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
@@ -89,7 +51,8 @@ public class DrillBlock extends Block
 		int z = pos.getZ();
 
 		DrillUpdateTick_GenerateStuffProcedure.execute(world, x, y, z);
-		world.getBlockTicks().scheduleTick(pos, this, 30);
+
+		world.scheduleTick(pos, this, 30);
 	}
 
 	@OnlyIn(Dist.CLIENT)
@@ -127,6 +90,7 @@ public class DrillBlock extends Block
 				}
 			}, pos);
 		}
+
 		return InteractionResult.SUCCESS;
 	}
 
@@ -156,6 +120,7 @@ public class DrillBlock extends Block
 				Containers.dropContents(world, pos, be);
 				world.updateNeighbourForOutputSignal(pos, this);
 			}
+
 			super.onRemove(state, world, pos, newState, isMoving);
 		}
 	}
@@ -173,4 +138,5 @@ public class DrillBlock extends Block
 		else
 			return 0;
 	}
+
 }

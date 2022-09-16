@@ -14,7 +14,8 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "router"
+      "registry_name": "router",
+      "path": "~/RouterStuff"
     },
     {
       "name": "Routergui",
@@ -22,15 +23,17 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "routergui"
+      "registry_name": "routergui",
+      "path": "~/RouterStuff"
     },
     {
       "name": "Conveyer",
       "type": "block",
       "sortid": 3,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
-      "registry_name": "conveyer"
+      "registry_name": "conveyer",
+      "path": "~/ConveyorStuff"
     },
     {
       "name": "Copper",
@@ -38,7 +41,8 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "copper"
+      "registry_name": "copper",
+      "path": "~/Materials"
     },
     {
       "name": "ConveyerUpdateTick",
@@ -66,7 +70,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ConveyorStuff"
     },
     {
       "name": "ConveyorGui",
@@ -74,7 +79,8 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "conveyor_gui"
+      "registry_name": "conveyor_gui",
+      "path": "~/ConveyorStuff"
     },
     {
       "name": "Soundtrack1",
@@ -82,7 +88,8 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "soundtrack_1"
+      "registry_name": "soundtrack_1",
+      "path": "~/Soundtracks"
     },
     {
       "name": "Soundtrack2",
@@ -90,7 +97,8 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "soundtrack_2"
+      "registry_name": "soundtrack_2",
+      "path": "~/Soundtracks"
     },
     {
       "name": "ConveyerValue",
@@ -119,7 +127,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ConveyorStuff"
     },
     {
       "name": "Drillgui",
@@ -127,15 +136,17 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drillgui"
+      "registry_name": "drillgui",
+      "path": "~/Drill"
     },
     {
       "name": "Drill",
       "type": "block",
       "sortid": 12,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
-      "registry_name": "drill"
+      "registry_name": "drill",
+      "path": "~/Drill"
     },
     {
       "name": "DrillMultiblocker",
@@ -169,25 +180,28 @@
       "name": "Drill11",
       "type": "block",
       "sortid": 14,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
-      "registry_name": "drill_11"
+      "registry_name": "drill_11",
+      "path": "~/Drill"
     },
     {
       "name": "Drill12",
       "type": "block",
       "sortid": 15,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
-      "registry_name": "drill_12"
+      "registry_name": "drill_12",
+      "path": "~/Drill"
     },
     {
       "name": "Drill13",
       "type": "block",
       "sortid": 16,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
-      "registry_name": "drill_13"
+      "registry_name": "drill_13",
+      "path": "~/Drill"
     },
     {
       "name": "StoneCopperOre",
@@ -195,7 +209,8 @@
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_copper_ore"
+      "registry_name": "stone_copper_ore",
+      "path": "~/Ores"
     },
     {
       "name": "StoneLeadOre",
@@ -203,7 +218,8 @@
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_lead_ore"
+      "registry_name": "stone_lead_ore",
+      "path": "~/Ores"
     },
     {
       "name": "StoneCoalOre",
@@ -211,7 +227,8 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_coal_ore"
+      "registry_name": "stone_coal_ore",
+      "path": "~/Ores"
     },
     {
       "name": "StoneTitaniumOre",
@@ -219,7 +236,8 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_titanium_ore"
+      "registry_name": "stone_titanium_ore",
+      "path": "~/Ores"
     },
     {
       "name": "StoneScrapOre",
@@ -227,7 +245,8 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "stone_scrap_ore"
+      "registry_name": "stone_scrap_ore",
+      "path": "~/Ores"
     },
     {
       "name": "Titanium",
@@ -235,7 +254,8 @@
       "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "titanium"
+      "registry_name": "titanium",
+      "path": "~/Materials"
     },
     {
       "name": "Scrap",
@@ -243,7 +263,8 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "scrap"
+      "registry_name": "scrap",
+      "path": "~/Materials"
     },
     {
       "name": "Coal",
@@ -251,7 +272,8 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "coal"
+      "registry_name": "coal",
+      "path": "~/Materials"
     },
     {
       "name": "Lead1",
@@ -259,7 +281,8 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "lead_1"
+      "registry_name": "lead_1",
+      "path": "~/Materials"
     },
     {
       "name": "CraftingScreen",
@@ -480,7 +503,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Drill"
     },
     {
       "name": "Southfacing",
@@ -508,7 +532,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ConveyorStuff"
     },
     {
       "name": "CraftRouter",
@@ -683,6 +708,30 @@
       },
       {
         "name": "Drilling",
+        "children": []
+      },
+      {
+        "name": "ConveyorStuff",
+        "children": []
+      },
+      {
+        "name": "Soundtracks",
+        "children": []
+      },
+      {
+        "name": "Materials",
+        "children": []
+      },
+      {
+        "name": "Ores",
+        "children": []
+      },
+      {
+        "name": "RouterStuff",
+        "children": []
+      },
+      {
+        "name": "Drill",
         "children": []
       }
     ]

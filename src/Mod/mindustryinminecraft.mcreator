@@ -28,7 +28,7 @@
       "name": "Conveyer",
       "type": "block",
       "sortid": 3,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "conveyer"
     },
@@ -133,7 +133,7 @@
       "name": "Drill",
       "type": "block",
       "sortid": 12,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "drill"
     },
@@ -169,7 +169,7 @@
       "name": "Drill11",
       "type": "block",
       "sortid": 14,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "drill_11"
     },
@@ -177,7 +177,7 @@
       "name": "Drill12",
       "type": "block",
       "sortid": 15,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "drill_12"
     },
@@ -185,7 +185,7 @@
       "name": "Drill13",
       "type": "block",
       "sortid": 16,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "drill_13"
     },

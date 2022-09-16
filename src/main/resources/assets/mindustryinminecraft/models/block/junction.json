@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mindustryinminecraft:blocks/block-junction-ui_3",
-    "particle": "mindustryinminecraft:blocks/block-junction-ui_3"
-  }
-}
